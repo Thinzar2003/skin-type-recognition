@@ -52,12 +52,12 @@ if uploaded_file is not None:
     st.subheader("Prediction Result")
     st.write(f"**Skin Type:** {predicted_class}")
     st.write(f"**Confidence:** {confidence:.2f}%")
-import os
-import tensorflow as tf
 
 import os
 import tensorflow as tf
 
-MODEL_PATH = "skin_type_model.h5"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "skin_type_model.h5")
 
 model = tf.keras.models.load_model(MODEL_PATH)
+
