@@ -55,9 +55,9 @@ if uploaded_file is not None:
 import os
 import tensorflow as tf
 
+import os
+import tensorflow as tf
+
 MODEL_PATH = "skin_type_model.h5"
 
-if not os.path.exists(MODEL_PATH):
-    raise FileNotFoundError("Model file not found")
-
-model = tf.keras.models.load_model(""skin_type_model.h5")
+model = tf.keras.models.load_model(MODEL_PATH)
