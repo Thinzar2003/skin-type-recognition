@@ -55,9 +55,11 @@ if uploaded_file is not None:
 
 import os
 import tensorflow as tf
+import streamlit as st
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "skin_type_model.h5")
+MODEL_PATH = "skin_type_model.h5"
+
+st.write("Files in folder:", os.listdir())
 
 model = tf.keras.models.load_model(MODEL_PATH)
 
